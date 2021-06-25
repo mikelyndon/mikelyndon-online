@@ -5,9 +5,10 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const BlogPostTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
+  const post = data.mdx
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
   let featuredImg = getImage(post.frontmatter.featuredImage)
@@ -24,14 +25,20 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
-          <GatsbyImage image={featuredImg} className="featured-image" />
+          {/* if featuredImg returns something add it to the top of the page */}
+          {featuredImg ? (
+            <GatsbyImage
+              image={featuredImg}
+              alt={post.frontmatter.featuredImageAlt}
+              className="featured-image"
+            />
+          ) : null}
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p className="header-date">{post.frontmatter.date}</p>
         </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
-        />
+        <section itemProp="articleBody">
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </section>
         <hr />
         <footer>
           <Bio />
@@ -80,14 +87,15 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(id: { eq: $id }) {
+    mdx(id: { eq: $id }) {
       id
+      body
       excerpt(pruneLength: 160)
-      html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImageAlt
         featuredImage {
           childImageSharp {
             gatsbyImageData(
@@ -99,7 +107,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
+    previous: mdx(id: { eq: $previousPostId }) {
       fields {
         slug
       }
@@ -107,7 +115,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    next: markdownRemark(id: { eq: $nextPostId }) {
+    next: mdx(id: { eq: $nextPostId }) {
       fields {
         slug
       }

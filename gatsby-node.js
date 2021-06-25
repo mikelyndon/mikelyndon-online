@@ -12,7 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Get all markdown blog posts sorted by date
   const result = await graphql(`
     {
-      postsRemark: allMarkdownRemark(
+      postsMdx: allMdx(
         sort: { fields: [frontmatter___date], order: ASC }
         limit: 1000
       ) {
@@ -26,7 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      categoryGroup: allMarkdownRemark(limit: 2000) {
+      categoryGroup: allMdx(limit: 2000) {
         group(field: frontmatter___category) {
           fieldValue
         }
@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.postsRemark.nodes
+  const posts = result.data.postsMdx.nodes
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -87,7 +87,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   //   console.log(`\n`, node.path)
   // }
 
-  if (node.internal.type === `MarkdownRemark`) {
+  if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
 
     createNodeField({
@@ -123,7 +123,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       twitter: String
     }
 
-    type MarkdownRemark implements Node {
+    type Mdx implements Node {
       frontmatter: Frontmatter
       fields: Fields
     }

@@ -27,9 +27,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        plugins: [
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
           {
             resolve: "gatsby-remark-embed-video",
             options: {
@@ -84,7 +85,6 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
-    `gatsby-plugin-mdx`,
     // {
     //   resolve: `gatsby-plugin-mdx`,
     //   options: {

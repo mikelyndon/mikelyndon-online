@@ -7,8 +7,8 @@ import { Link, graphql } from "gatsby"
 const Category = ({ pageContext, data }) => {
   const { category } = pageContext
   // const { nodes, totalCount } = data.allMarkdownRemark
-  const totalCount = data.allMarkdownRemark.totalCount
-  const nodes = data.allMarkdownRemark.nodes
+  const totalCount = data.allMdx.totalCount
+  const nodes = data.allMdx.nodes
   const categoryHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${category}"`
@@ -38,7 +38,7 @@ Category.propTypes = {
     category: PropTypes.string.isRequired,
   }),
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
+    allMdx: PropTypes.shape({
       totalCount: PropTypes.number.isRequired,
       nodes: PropTypes.arrayOf(
         PropTypes.shape({
@@ -58,7 +58,7 @@ export default Category
 
 export const pageQuery = graphql`
   query($category: String) {
-    allMarkdownRemark(
+    allMdx(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { category: { in: [$category] } } }

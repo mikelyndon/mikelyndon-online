@@ -1,9 +1,25 @@
 import React from "react"
 
-const Giflike = () => {
+const Giflike = ({ videoSrcURL, videoTitle, ...props }) => {
+  let vidRef = React.createRef()
+  const playVideo = () => {
+    vidRef.current.play()
+  }
+
+  const pauseVideo = () => {
+    vidRef.current.pause()
+  }
+
   return (
     <div className="giflike">
-      <p> Testing </p>
+      <video
+        ref={vidRef}
+        loop
+        onMouseOver={() => playVideo()}
+        onMouseOut={() => pauseVideo()}
+      >
+        <source src={videoSrcURL} type="video/mp4" />
+      </video>
     </div>
   )
 }

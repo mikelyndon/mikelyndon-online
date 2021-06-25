@@ -7,6 +7,7 @@ slug: playful-permission-slips-babies
 title: "Playful Permission Slips: Babies"
 category: "Play, Empathy, Gift-giving"
 featuredImage: marcos-paulo-prado-WfYurdixQ7w-unsplash.jpg
+featuredImageAlt: "Baby looking at camera while person plays guitar."
 ---
 
 <!-- ![Baby smiling at camera while someone plays guitar](./marcos-paulo-prado-WfYurdixQ7w-unsplash.jpg) -->

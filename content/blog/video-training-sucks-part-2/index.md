@@ -13,15 +13,11 @@ This is a follow-up to an article I wrote about [the poor state of video trainin
 
 In that post, I identified key points that I thought needed to be addressed for video training to be more effective. They were:
 
-Limit your focus - get to the heart of what you're trying to teach us. Be ruthless.
-
-Show what you're talking about - take the time to create an infographic or build a file that shows the result or concept.
-
-Underlying concepts - give me the why behind the how of what you're doing.
-
-Edit the video like a cooking show - skip over the repetitive parts or ideas that people already know.
-
-Production value - Make sure the sound is clear, the video quality is readable, you've removed any glaring mistakes, and you injected some of your sparkling personality (that's a nice-to-have, not a requirement).
+- Limit your focus - get to the heart of what you're trying to teach us. Be ruthless.
+- Show what you're talking about - take the time to create an infographic or build a file that shows the result or concept.
+- Underlying concepts - give me the why behind the how of what you're doing.
+- Edit the video like a cooking show - skip over the repetitive parts or ideas that people already know.
+- Production value - Make sure the sound is clear, the video quality is readable, you've removed any glaring mistakes, and you injected some of your sparkling personality (that's a nice-to-have, not a requirement).
 
 Since I wrote that article, I've had some time to analyse the efficacy of video training. And the crazy thing is that even when a video is informative, concise and well-produced, there's still a considerable drop off in engagement. Only 10% of the people that click play watch the video to the end.
 
