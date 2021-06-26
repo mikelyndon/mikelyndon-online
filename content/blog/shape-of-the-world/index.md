@@ -10,7 +10,12 @@ category: "VFX"
 tags: ["houdini"]
 ---
 
-`vimeo: https://vimeo.com/209795649`
+import Video from "../../../src/components/video.js"
+
+<Video 
+  videoSrcURL="https://player.vimeo.com/video/209795649" 
+  videoTitle="Herding Rocks: GDC 2017"
+/>
 
 SideFX invited me to give a quick talk at their booth during GDC 2017. I had already shown most of the [work I'd done for Gears of War](/realtime-vfx-for-games-houdini-illume-webinar/) in a webinar the previous year so I wasn't too sure what I would show. Thankfully game designer extraordinaire and ex-colleague Stu Maxwell asked me to help out on his indie game, [Shape Of The World](http://www.shapeoftheworldgame.com). He needed a way to animate a monument made up of 100's of rocks that would form around the player. There's nothing ground breaking here but I show some of the failed attempts at creating this moment and the final method in a little more detail. If you're interested in controlling rbd simulations with custom forces, using the sop solver to create a simple particle system or layering procedural animation then check out the video.
 

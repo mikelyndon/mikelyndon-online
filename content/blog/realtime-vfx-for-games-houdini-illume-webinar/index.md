@@ -10,7 +10,12 @@ category: "VFX"
 tags: ["houdini"]
 ---
 
-`vimeo: https://vimeo.com/193820978`
+import Video from "../../../src/components/video.js"
+
+<Video 
+  videoSrcURL="https://player.vimeo.com/video/193820978" 
+  videoTitle="Realtime VFX for Games"
+/>
 
 Towards the end of 2016 I was fortunate enough to share a lot of the work we did on Gears of War 4 using Houdini through a webinar organized by SideFX. At just under 2 hours there's a lot of info crammed in. I wanted to cover as much as possible at a higher level because I think the concepts can be applied more broadly. I also dive in and show some specific setups.
 

@@ -267,6 +267,11 @@ a:focus {
   color: var(--color-red);
 } */
 
+/* Images */
+img {
+  width: 100%;
+}
+
 /* Custom classes */
 
 .global-container {
@@ -386,6 +391,23 @@ a:focus {
   margin-bottom: var(--spacing-6);
 }
 
+.video {
+  padding-bottom: 50%;
+  position: relative;
+  height: 0px;
+  overflow: hidden;
+  margin-bottom: 1.0725rem;
+}
+
+.video-iframe {
+  border: 0px none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {
@@ -396,6 +418,16 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+  /* Hide the third and fifth columns on smaller screens */
+  div.freq-table + table th:nth-child(3),
+  td:nth-child(3) {
+    display: none;
+  }
+
+  div.freq-table + table th:nth-child(5),
+  td:nth-child(5) {
+    display: none;
   }
 }
 

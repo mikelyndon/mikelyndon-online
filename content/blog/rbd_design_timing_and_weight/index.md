@@ -11,4 +11,9 @@ post_format: Video
 tags: ["houdini", "rbd", "tutorial"]
 ---
 
-`vimeo: https://vimeo.com/198616014`
+import Video from "../../../src/components/video.js"
+
+<Video 
+  videoSrcURL="https://player.vimeo.com/video/198616014" 
+  videoTitle="RBD Timing And Weight"
+/>

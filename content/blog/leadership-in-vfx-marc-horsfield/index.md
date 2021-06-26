@@ -10,11 +10,16 @@ category: "Leadership"
 tags: ["interview"]
 ---
 
+import Video from "../../../src/components/video.js"
+
 I posted this back in 2015 on [my old wordpress site](https://simulatedaffect.wordpress.com/2015/12/14/leadership-in-video-games-and-film-our-first-hangout/). In an effort to consolidate the various bits and bobs I have strewn across the internet I wanted to add this to my self hosted website. Below is the text and links as it was published previously.
 
 Apologies - the video is missing the first few seconds.
 
-`youtube: https://www.youtube.com/watch?v=vzX84EF_Yn4`
+<Video
+  videoSrcURL="https://www.youtube-nocookie.com/embed/vzX84EF_Yn4?rel=0"
+  videoTitle="Leadership in Video Games and Film Computer Graphics"
+/>
 
 Last week I held my first google hangout on air to discuss leadership in video games and film.  I was joined by Marc Horsfield, a Production Technology Supervisor in Film.  He was also my lead at 3 separate companies.  I was always impressed with how he lead his teams.  Over the course of an hour we chatted about what it means to be a lead and more specifically what kind of things you should be thinking about in the first couple of months of becoming a lead.  The hangout on air allowed others to watch the broadcast live and ask questions through the Q&A app.  I think for our first attempt it worked out quite well.  We covered some of the basics about being a lead.  We answered a bunch of questions that viewers had posted.
 

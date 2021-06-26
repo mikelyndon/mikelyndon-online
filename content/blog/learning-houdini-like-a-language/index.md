@@ -39,6 +39,8 @@ I reached out to Sidefx and they were kind enough to provide me with a list of t
 
 This was a good start but I wanted a little more data about the frequency of the node usage so I wrote a script that traversed a directory structure, counted up all the SOP nodes and generated a csv. If you're interested you can find a link to the script at the end of this post. The csv is ordered by frequency and includes the percentage each node is used and accumulative percentage. This gave me a way of figuring out where the diminishing returns were. And it turns out that roughly 23 nodes are used 80% of the time. It took another 20 nodes or so to reach the 90% mark. Here's a list based on the hip files on my personal computer.
 
+<div className="freq-table"></div>
+
 |     |     NodeType      | Count |      % | Total % |
 | --: | :---------------: | :---: | -----: | ------: |
 |  1. |      Switch       | 14893 | 12.33% |  12.33% |
