@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2019-03-31T23:49:26.000Z"
 layout: post
 link: https://mikelyndon.online/2019/03/31/presenting-at-gdc-2017-postmortem/
+redirect_from: /2019/03/31/presenting-at-gdc-2017-postmortem/
 slug: presenting-at-gdc-2017-postmortem
 title: "Presenting at GDC 2017: A Postmortem"
 category: "VFX"

@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2020-03-16T12:18:27.000Z"
 layout: post
 link: https://mikelyndon.online/2020/03/16/stop-calling-yourself-a-software-artist/
+redirect_from: /2020/03/16/stop-calling-yourself-a-software-artist/
 slug: stop-calling-yourself-a-software-artist
 title: Stop Calling Yourself a [Software] Artist
 category: "VFX"

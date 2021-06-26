@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2020-03-26T01:06:26.000Z"
 layout: post
 link: https://mikelyndon.online/2020/03/25/digital-artists-of-the-future/
+redirect_from: /2020/03/25/digital-artists-of-the-future/
 slug: digital-artists-of-the-future
 title: Digital Artists of the Future
 category: "VFX"

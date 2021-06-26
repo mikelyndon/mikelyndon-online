@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2017-02-12T08:31:49.000Z"
 layout: post
 link: https://mikelyndon.online/2017/02/12/rbd-design-secondary-fracturing/
+redirect_from: /2017/02/12/rbd-design-secondary-fracturing/
 slug: rbd-design-secondary-fracturing
 title: RBD Design - Secondary Fracturing
 categories: "Education"

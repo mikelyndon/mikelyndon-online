@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2017-03-17T23:48:17.000Z"
 layout: post
 link: https://mikelyndon.online/2017/03/17/realtime-vfx-for-games-houdini-illume-webinar/
+redirect_from: /2017/03/17/realtime-vfx-for-games-houdini-illume-webinar/
 slug: realtime-vfx-for-games-houdini-illume-webinar
 title: "Realtime VFX for Games: Houdini ILLUME Webinar"
 category: "VFX"

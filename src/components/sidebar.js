@@ -21,7 +21,7 @@ const Sidebar = () => {
           </Link>
         </li>
         <li>
-          <Link className="category" to="/category/pegg">
+          <Link className="category" to="/category/play-empathy-gift-giving">
             Play, Empathy, Gift-giving
           </Link>
         </li>

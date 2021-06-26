@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2017-02-07T17:00:35.000Z"
 layout: post
 link: https://mikelyndon.online/2017/02/07/learning-houdini-like-a-language/
+redirect_from: /2017/02/07/learning-houdini-like-a-language/
 slug: learning-houdini-like-a-language
 title: Learning Houdini Like A Language
 category: "Education"

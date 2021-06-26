@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2020-03-08T19:46:57.000Z"
 layout: post
 link: https://mikelyndon.online/2020/03/08/video-training-sucks-part-2/
+redirect_from: /2020/03/08/video-training-sucks-part-2/
 slug: video-training-sucks-part-2
 title: "Video Training Sucks: Part 2"
 category: "Education"

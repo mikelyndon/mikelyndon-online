@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2019-08-18T22:26:10.000Z"
 layout: post
 link: https://mikelyndon.online/2019/08/18/mating-in-captivity-a-book-report/
+redirect_from: /2019/08/18/mating-in-captivity-a-book-report/
 slug: mating-in-captivity-a-book-report
 title: "Mating in Captivity: A book report"
 category: "Self Development"

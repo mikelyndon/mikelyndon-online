@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2020-12-09T03:04:38.000Z"
 layout: post
 link: https://mikelyndon.online/2020/12/08/houdini-usd-and-ue4-part1/
+redirect_from: /2020/12/08/houdini-usd-and-ue4-part1/
 slug: houdini-usd-and-ue4-part1
 title: Houdini, USD and UE4 - part 1
 category: VFX

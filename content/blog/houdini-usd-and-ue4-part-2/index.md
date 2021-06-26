@@ -4,6 +4,7 @@ comments: false
 date: "2020-12-10T02:49:07.000Z"
 layout: post
 link: https://mikelyndon.online/2020/12/09/houdini-usd-and-ue4-part-2/
+redirect_from: /2020/12/09/houdini-usd-and-ue4-part-2/
 slug: houdini-usd-and-ue4-part-2
 title: Houdini, USD and UE4 - part 2
 tags: ["houdini", "ue4"]

@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2017-02-09T02:15:47.000Z"
 layout: post
 link: https://mikelyndon.online/2017/02/08/video-training-sucks/
+redirect_from: /2017/02/08/video-training-sucks/
 slug: video-training-sucks
 title: Video Training Sucks (and what we can do to make it better)
 category: "Education"

@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2017-03-24T01:05:00.000Z"
 layout: post
 link: https://mikelyndon.online/2017/03/23/shape-of-the-world/
+redirect_from: /2017/03/23/shape-of-the-world/
 slug: shape-of-the-world
 title: "Herding Rocks: Procedural Animation in Shape of the World"
 category: "VFX"

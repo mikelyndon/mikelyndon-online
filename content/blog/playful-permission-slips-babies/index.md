@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2020-03-17T13:16:53.000Z"
 layout: post
 link: https://mikelyndon.online/2020/03/17/playful-permission-slips-babies/
+redirect_from: /2020/03/17/playful-permission-slips-babies/
 slug: playful-permission-slips-babies
 title: "Playful Permission Slips: Babies"
 category: "Play, Empathy, Gift-giving"

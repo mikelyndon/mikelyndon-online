@@ -3,7 +3,7 @@ const _ = require("lodash")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   // Define a template for blog post
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
@@ -23,6 +23,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
           frontmatter {
             category
+            redirect_from
           }
         }
       }
@@ -52,6 +53,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+
+      if (post.frontmatter.redirect_from) {
+        console.log(post.frontmatter.redirect_from)
+        console.log(post.fields.slug)
+        createRedirect({
+          fromPath: post.frontmatter.redirect_from,
+          toPath: post.fields.slug,
+        })
+      }
 
       createPage({
         path: post.fields.slug,

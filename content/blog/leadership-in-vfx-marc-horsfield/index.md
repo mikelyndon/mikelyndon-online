@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2017-03-17T22:56:17.000Z"
 layout: post
 link: https://mikelyndon.online/2017/03/17/leadership-in-vfx-marc-horsfield/
+redirect_from: /2017/03/17/leadership-in-vfx-marc-horsfield/
 slug: leadership-in-vfx-marc-horsfield
 title: "Leadership in VFX: Marc Horsfield"
 category: "Leadership"

@@ -3,6 +3,7 @@ author: mikelyndonadmin
 date: "2017-01-05T06:34:06.000Z"
 layout: post
 link: https://mikelyndon.online/2017/01/04/creating-and-consuming/
+redirect_from: /2017/01/04/creating-and-consuming/
 slug: creating-and-consuming
 title: Creating and Consuming
 category: "Self Development"

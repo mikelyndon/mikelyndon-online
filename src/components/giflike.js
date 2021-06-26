@@ -16,7 +16,9 @@ const Giflike = ({ videoSrcURL, videoTitle, ...props }) => {
         ref={vidRef}
         loop
         onMouseOver={() => playVideo()}
+        onFocus={() => playVideo()}
         onMouseOut={() => pauseVideo()}
+        onBlur={() => pauseVideo()}
       >
         <source src={videoSrcURL} type="video/mp4" />
       </video>
