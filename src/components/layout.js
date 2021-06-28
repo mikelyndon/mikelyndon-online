@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import Sidebar from "../components/sidebar"
+// import Sidebar from "../components/sidebar"
+import Navbar from "../components/navbar"
 
 // import { MDXProvider } from "@mdx-js/react"
 // import Video from "../components/video"
@@ -30,8 +31,9 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className="global-container">
       {/* <MDXProvider components={shortcodes}> */}
-      <header className="global-header">{header}</header>
-      <Sidebar />
+      {/* <header className="global-header">{header}</header> */}
+      <Navbar />
+      {/* <Sidebar /> */}
       <div className="global-wrapper" data-is-root-path={isRootPath}>
         <main>{children}</main>
         <footer>

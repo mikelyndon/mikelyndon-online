@@ -260,7 +260,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: var(--color-hover);
+  color: var(--color-accent);
 }
 
 /* footer a {
@@ -272,19 +272,128 @@ img {
   width: 100%;
 }
 
-/* Custom classes */
-
-.global-container {
-  display: flex;
-  flex-wrap: wrap;
+/* Custom Navbar */
+.navbar header {
+  background: var(--color-base02);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
 }
 
+.logo {
+  margin-top: var(--spacing-5);
+  margin-bottom: var(--spacing-5);
+  margin-left: var(--spacing-3);
+}
+
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, 0.75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: var(--color-heading);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: "";
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--color-base02);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: var(--color-heading);
+  text-decoration: none;
+  font-size: var(--fontSize-2);
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* Custom classes */
+
+/* .global-container {
+  display: flex;
+  flex-wrap: wrap;
+} */
+
 .global-wrapper {
-  flex-grow: 1;
-  flex-basis: 100%;
+  display: grid;
+  place-items: center;
+  /* flex-grow: 1; */
+  /* flex-basis: 100%; */
   /* margin: var(--spacing-0) auto; */
   /* max-width: var(--maxWidth-wrapper); */
-  padding: var(--spacing-0) var(--spacing-5);
+  padding: var(--spacing-32) var(--spacing-5) var(--spacing-0) var(--spacing-5);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -441,16 +550,81 @@ img {
     text-align: left;
   } */
 
-  .global-wrapper {
+  /* .global-wrapper {
     flex: 1 1 65%;
     padding: var(--spacing-5) var(--spacing-5);
-  }
+  } */
 
   .sidebar {
     flex: 0 1 35%;
     /* max-width: 200px; */
     padding: var(--spacing-5) var(--spacing-5);
     text-align: right;
+  }
+  /* Navbar Mods */
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .navbar header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(540px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+    margin-left: var(--spacing-0);
+  }
+
+  nav {
+    all: unset; /* this causes issues with Edge, since it's unsupported */
+
+    /* the following lines are not from my video, but add Edge support */
+    /* position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial; */
+    /* end Edge support stuff */
+
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+    margin-right: 1em;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  .navbar nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: var(--color-base1);
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  .navbar nav a:hover::before {
+    transform: scale(1, 1);
   }
 }
 
