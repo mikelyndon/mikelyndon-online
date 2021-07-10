@@ -1,26 +1,26 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import Layout from "../components/layout"
+
 // Components
 import { Link, graphql } from "gatsby"
 
 const Category = ({ pageContext, data }) => {
   const { category } = pageContext
   // const { nodes, totalCount } = data.allMarkdownRemark
-  const totalCount = data.allMdx.totalCount
+  // const totalCount = data.allMdx.totalCount
   const nodes = data.allMdx.nodes
-  const categoryHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${category}"`
+  // const categoryHeader = `${totalCount} post${
+  // totalCount === 1 ? "" : "s"
+  // } tagged with "${category}"`
+  const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
-    <div>
-      <h1>{categoryHeader}</h1>
-      {/* <div>{nodes}</div> */}
-      <ul>
+    <Layout location={category} title={siteTitle}>
+      <h2 style={{ marginTop: `0` }}>{category}</h2>
+      <ul style={{ listStyle: `none`, paddingLeft: `0` }}>
         {nodes.map(node => {
-          // const { slug } = node.fields
-          // const { title } = node.frontmatter
           return (
             <li key={node.fields.slug}>
               <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
@@ -29,7 +29,7 @@ const Category = ({ pageContext, data }) => {
         })}
       </ul>
       <Link to="/categories">All Categories</Link>
-    </div>
+    </Layout>
   )
 }
 
@@ -71,6 +71,11 @@ export const pageQuery = graphql`
         frontmatter {
           title
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

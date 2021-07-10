@@ -8,7 +8,7 @@ module.exports = {
     description: `My views on vfx, education and me.`,
     siteUrl: `https://staging.mikelyndon.online/`,
     social: {
-      twitter: `mikelyndon`,
+      twitter: `mike_lyndon`,
     },
   },
   plugins: [

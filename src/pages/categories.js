@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import Layout from "../components/layout"
+
 // Utilities
 import kebabCase from "lodash/kebabCase"
 
@@ -15,23 +17,27 @@ const CategoriesPage = ({
       siteMetadata: { title },
     },
   },
-}) => (
-  <div>
-    <Helmet title={title} />
-    <div>
-      <h1>Categories</h1>
-      <ul>
-        {group.map(category => (
-          <li key={category.fieldValue}>
-            <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
-              {category.fieldValue} ({category.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-)
+  location,
+}) => {
+  return (
+    <Layout location={location} title={title}>
+      <div>
+        <h2 style={{ marginTop: `0` }}>Categories</h2>
+        <ul style={{ listStyle: `none`, paddingLeft: `0` }}>
+          {group
+            .sort((a, b) => (a.totalCount < b.totalCount ? 1 : -1))
+            .map(category => (
+              <li key={category.fieldValue}>
+                <Link to={`/category/${kebabCase(category.fieldValue)}/`}>
+                  {category.fieldValue} ({category.totalCount})
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </div>
+    </Layout>
+  )
+}
 
 CategoriesPage.propTypes = {
   data: PropTypes.shape({
